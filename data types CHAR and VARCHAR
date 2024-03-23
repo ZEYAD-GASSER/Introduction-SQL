@@ -1,0 +1,16 @@
+In SQL, the CHAR and VARCHAR are data types used to store character data. Here's an explanation of each:
+
+CHAR: The CHAR data type is used to store fixed-length character strings.
+When you define a CHAR column, you specify the maximum number of characters it can hold.
+The column will always occupy that fixed amount of storage, even if the actual data stored in it is shorter. 
+If the data inserted into a CHAR column is shorter than the defined length, it will be padded with spaces to fill the remaining space.
+
+For example, if you define a CHAR(10) column and insert the string 'Hello' into it,
+the value will be stored as 'Hello ' (padded with spaces to reach the fixed length of 10 characters).
+
+VARCHAR: The VARCHAR data type is used to store variable-length character strings.
+Unlike CHAR, a VARCHAR column only occupies the necessary amount of storage to store the actual data.
+It does not pad the data with extra spaces. The length of a VARCHAR column is flexible and can vary based on the length of the inserted data.
+
+For example, if you define a VARCHAR(10) column and insert the string 'Hello' into it,
+the value will be stored as 'Hello' without any extra spaces.
