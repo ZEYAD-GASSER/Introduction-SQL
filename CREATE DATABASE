@@ -1,0 +1,16 @@
+create database My_first_DB;
+CREATE DATABASE My_first_DB;
+//It does not make any difference to write in small or capital letters
+
+use My_first_DB;
+//to use my database (My_first_DB)
+
+DROP database My_first_DB;
+//to drop your database
+
+alter database My_first_DB read only=1; 
+// to make your database in Read-only mode
+
+alter database My_first_DB read only=0; 
+// to cancel the mode Read-only
+
