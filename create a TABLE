@@ -1,0 +1,31 @@
+create table employees(
+employee_id int,
+employee_name varcharacter(50),
+hourly_pay decimal(5,2),
+    hire_date DATE
+
+);
+
+select *from employees; 
+
+RENAME TABLE employees TO workers;
+
+alter TABLE employees
+ADD phone_number VARCHAR(15);
+
+ALTER TABLE employees
+RENAME COLUMN phone_number TO email;
+ 
+ALTER TABLE employees
+MODIFY COLUMN email VARCHAR(15);
+
+ALTER TABLE employees 
+MODIFY email VARCHAR(100) 
+AFTER employee_name;
+
+ALTER TABLE employees 
+MODIFY email VARCHAR(100) 
+FIRST;
+
+ALTER TABLE employees
+DROP COLUMN email;
