@@ -1,0 +1,13 @@
+insert into employees values
+("zeyad",100.55,12345,25-10-2004);
+
+
+insert into employees (employee_name,ph_num)
+	values ("zeyad",12345);
+
+
+insert into employees values
+              ("zeyad 1",100.55,12345,25-10-2004)
+		         ,("zeyad 2",100.55,12345,25-10-2004)
+             ,("zeyad 3",100.55,12345,25-10-2004)
+             ,("zeyad 4",100.55,12345,25-10-2004);
