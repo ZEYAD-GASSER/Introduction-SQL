@@ -9,6 +9,7 @@ hourly_pay decimal(5,2),
 select *from employees; 
 
 RENAME TABLE employees TO workers;
+RENAME TABLE workers TO employees;
 
 alter TABLE employees
 ADD phone_number VARCHAR(15);
@@ -17,7 +18,7 @@ ALTER TABLE employees
 RENAME COLUMN phone_number TO email;
  
 ALTER TABLE employees
-MODIFY COLUMN email VARCHAR(15);
+MODIFY COLUMN email VARCHAR(100);
 
 ALTER TABLE employees 
 MODIFY email VARCHAR(100) 
