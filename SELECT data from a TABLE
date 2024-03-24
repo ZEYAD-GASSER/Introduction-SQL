@@ -1,0 +1,17 @@
+select  employee_name,ph_num from employees;
+
+select * from employees
+ where ph_num  = 12345 ;
+
+select * from employees
+ where hourly_pay > 50;
+
+select * from employees
+ where hourly_pay != 100.55;
+
+	
+select * from employees
+ where hourly_pay is null;
+
+select * from employees
+ where hourly_pay is not null;
