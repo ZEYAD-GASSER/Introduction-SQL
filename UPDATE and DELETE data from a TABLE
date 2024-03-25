@@ -1,0 +1,20 @@
+update employees 
+set ph_num=10
+where employee_name="zeyad";
+
+
+// update all employees ph_num to make value =11
+update employees 
+set ph_num=11;
+
+
+update employees 
+set hourly_pay=55.55,
+hire_date="2004-01-25"
+where employee_name="zeyad";
+
+//delete all rows 
+delete from employees;
+
+elete from employees
+where ph_num=10;
