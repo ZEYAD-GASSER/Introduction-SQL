@@ -1,0 +1,22 @@
+CREATE TABLE products (
+    product_id INT,
+    product_name varchar(25),
+    price DECIMAL(4, 2) NOT NULL
+);
+
+OR
+
+alter table products 
+modify  price DECIMAL(4, 2) NOT NULL;
+
+
+//in this line 
+insert into products values (100,"zeyad",null);
+
+//this price =null
+
+you will receive this error:Error Code:  Column 'price' cannot be null	
+
+
+//this Column cannot be null but can be 0
+insert into products values (100,"zeyad",0);
