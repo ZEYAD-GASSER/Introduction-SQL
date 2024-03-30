@@ -1,0 +1,23 @@
+create table products
+   ( product_id INT,
+    product_name varchar(25) UNIQUE,
+    price DECIMAL(4,2)
+    );
+
+
+OR
+
+alter table products 
+add constraint unique (product_name);
+
+
+//when you Duplicate this field
+
+INSERT INTO products
+VALUES (100, 'hamburger', 3.99),
+               (101, 'fries', 1.89),
+               (102, 'soda', 1.00),
+               (103, "ice cream", 1.49)
+               ,(100, 'hamburger', 3.99);
+
+you will receive this error:INSERT INTO products	Error Code:  Duplicate entry 'hamburger' for key 'products.product_name'	
