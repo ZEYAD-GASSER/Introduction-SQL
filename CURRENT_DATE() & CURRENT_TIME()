@@ -1,0 +1,18 @@
+create table test
+(
+my_date date,
+my_time time,
+my_datetime
+);
+
+insert into test
+values(current_date(),current_time(),now());
+
+
+//to next day
+insert into test
+values(current_date()+1,null,null);
+
+//to previous day
+insert into test
+values(current_date()-1,null,null);
