@@ -16,5 +16,5 @@ where employee_name="zeyad";
 //delete all rows 
 delete from employees;
 
-elete from employees
+delete from employees
 where ph_num=10;
