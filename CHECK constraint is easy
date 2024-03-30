@@ -1,0 +1,21 @@
+ product_name varchar(25) UNIQUE,
+    price DECIMAL(4,2)
+    constraint ch_pr check(price>=10.00)
+    );
+
+// I write constraint ch_pr to make easy when i want drop it 
+
+OR
+
+alter table pro 
+    add constraint ch_pr check(price>=10.00);
+
+//when insert price <10
+insert into pro values(123,"zg",2.00);
+
+you will receive this	Error Code: Check constraint 'ch_pr' is violated.
+
+
+
+alter table pro 
+drop check ch_pr;
