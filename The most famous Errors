@@ -1,4 +1,4 @@
-1 )update employees 
+1 ) update employees 
  set ph_num=null	Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column. 
  To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.	0.016 sec
 
@@ -9,3 +9,10 @@ By setting SQL_SAFE_UPDATES to 0, you can bypass the safe update mode temporaril
 However, exercise caution when using this option, as it removes the safety check for all subsequent UPDATE statements in the session.
 
 ***************************************************************************************************************************************************************************************
+
+2 )	Time	Action	Message	Duration / Fetch
+	Could not connect, server may not be running.	Unable to connect to localhost	
+
+show this video to help you :https://www.youtube.com/watch?v=NbnWy28MJE0
+
+**************************************************************************************************************************************************
