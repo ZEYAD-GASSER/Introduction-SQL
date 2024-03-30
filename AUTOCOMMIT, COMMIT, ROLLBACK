@@ -1,0 +1,19 @@
+ALTER TABLE employees MODIFY hire_date INT;
+//to change datatype of hire_date
+
+
+
+set autocommit=off;
+//TRANSACTIONS will not save automatically
+
+
+update employees 
+set ph_num=10
+where employee_name="zeyad 1";
+//to save changes write 
+commit;
+
+
+//before write commit;
+//if you change value  ph_num from 10 to 20 and you want have return to value 10 you should write this :
+ ROLLBACK;
