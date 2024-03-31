@@ -1,0 +1,14 @@
+describe test;
+show tables;
+
+
+create table transactions(
+transaction_id int primary key,
+amount decimal(2,2)
+);
+
+OR
+
+alter table transactions 
+add constraint primary key(transaction_id);
+
