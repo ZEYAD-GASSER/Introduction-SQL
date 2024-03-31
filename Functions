@@ -1,0 +1,26 @@
+
+More functions can be found here: 
+https://dev.mysql.com/doc/refman/8.0
+/***********************************************/
+
+SELECT COUNT(amount) as count
+FROM transactions;
+
+OR
+SELECT COUNT(amount) as "all transactions count "//any name
+FROM transactions;
+
+SELECT MAX(amount) AS maximum
+FROM transactions;
+
+SELECT MIN(amount) AS minimum
+FROM transactions;
+
+SELECT AVG(amount) AS average
+FROM transactions;
+
+SELECT SUM(amount) AS sum
+FROM transactions;
+
+SELECT CONCAT(first_name, “ ”, last_name) AS full_name
+FROM employee
