@@ -1,0 +1,31 @@
+
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+     first_name VARCHAR(50),
+     last_name VARCHAR(50)
+);
+INSERT INTO customers (first_name, last_name)
+VALUES  ("Fred", "Fish"),
+                ("Larry", "Lobster"),
+                ("Bubble", "Bass");
+
+
+// Add a named foreign key constraint to a new table
+CREATE TABLE transactions (
+    transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+    amount DECIMAL(5, 2),
+    customer_id INT,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+
+alter table transactionss
+AUTO_INCREMENT = 1000;
+
+alter table transactionss
+drop foreign key transactionss_ibfk_1;
+
+// Add a named foreign key constraint to an existing table
+
+alter table transactionsst
+add constraint fk_customer_id
+foreign key(customer_id) REFERENCES customers(customer_id);
