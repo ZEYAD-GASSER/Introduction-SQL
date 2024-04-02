@@ -1,0 +1,27 @@
+
+ any amount of random characters = %
+ one single random character = _
+*********************************************************
+SELECT * FROM employees
+WHERE first_name LIKE "s%";
+
+
+SELECT * FROM employees
+WHERE last_name LIKE "%r";//last char
+
+
+SELECT * FROM employees
+WHERE hire_date LIKE "2023%";
+
+
+SELECT * FROM employees
+WHERE job LIKE "_ook";
+
+
+SELECT * FROM employees
+WHERE hire_date LIKE "__-01-__";
+
+
+SELECT * FROM employees
+WHERE job LIKE "_a%";
+
