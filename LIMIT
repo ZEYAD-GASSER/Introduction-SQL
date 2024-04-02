@@ -1,0 +1,23 @@
+--> LIMIT clause is used to limit the number of records.
+--> Useful if you're working with a lot of data.
+--> Can be used to display a large data on pages (pagination)
+
+SELECT * FROM customers
+LIMIT 1;
+
+SELECT *FROM customers
+LIMIT 2;
+
+SELECT * FROM customers
+LIMIT 3;
+
+SELECT * FROM customers
+ORDER BY last_name DESC
+LIMIT 3;
+
+SELECT * FROM customers
+ORDER BY last_name ASC
+LIMIT 3;
+
+SELECT * FROM customers
+LIMIT 1, 3;
