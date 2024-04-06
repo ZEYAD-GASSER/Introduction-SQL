@@ -1,0 +1,48 @@
+--> GROUP BY = aggregate all rows by a specific column
+--> often used with aggregate functions
+--> ex.MAX(), MIN(), AVG(), COUNT(),SUM()
+
+/********************************************************************************************************************************************************************/
+DROP TABLE IF EXISTS transactions;
+
+                                          "IF EXISTS"
+is an optional clause that checks if the table exists before attempting to drop it
+If the table exists, it will be dropped. If the table doesn't exist, no error will be generated, and the statement will have no effect.
+
+/********************************************************************************************************************************************************************/
+
+CREATE TABLE transactions (
+    transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+    amount DECIMAL(5, 2),
+    customer_id INT,
+    order_date DATE,
+    FOREIGN KEY (customer_id) 
+    REFERENCES customers(customer_id)
+);
+alter table transactions
+drop foreign key transactions_ibfk_1;
+
+INSERT INTO transactions
+VALUES  (1000, 4.99, 3, "2023-01-01"),
+  (1001, 2.89, 2, "2023-01-01"),
+  (1002, 3.38, 3, "2023-01-02"),
+  (1003, 4.99, 1, "2023-01-02"),
+  (1004, 1.00, NULL, "2023-01-03"),
+  (1005, 2.49, 4, "2023-01-03"),
+  (1006, 5.48, NULL, "2023-01-03");
+        
+SELECT * FROM transactions;
+/********************************************************************************************************************************************************************/
+SELECT  sum(amount),order_date
+from  transactions
+group by order_date ;
+
+SELECT  sum(amount),customer_id
+from  transactions
+where customer_id is not null
+group by customer_id  ;
+
+SELECT  count(amount) ,customer_id
+from  transactions
+group by customer_id  
+having count(amount)>1 and customer_id is not null;
