@@ -1,0 +1,38 @@
+--> Stored procedure = is prepared SQL code that you can save great if there's a query that you write often
+                      --> reduces network traffic
+                      --> increases performance
+                      --> secure, admin can grant permission to use
+                      --> increases memory usage of every connection
+
+           Example 1 
+
+DELIMITER zz
+create procedure get_transactions()
+begin
+select * from transactions;
+end zz
+DELIMITER ;
+
+call get_transactions();
+
+             Example 2
+
+DELIMITER $$
+CREATE PROCEDURE find_customer(IN id INT)  
+BEGIN  
+ SELECT *
+ FROM customers
+ WHERE customer_id = id;
+END $$
+DELIMITER ;
+
+             Example 3
+
+
+DELIMITER $$
+CREATE PROCEDURE find_customer(IN f_name VARCHAR(50), IN l_name VARCHAR(50))  
+BEGIN  
+ SELECT *FROM customers
+ WHERE first_name = f_name AND last_name = l_name;
+END $$
+DELIMITER ;
