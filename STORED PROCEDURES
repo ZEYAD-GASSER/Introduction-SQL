@@ -2,6 +2,7 @@
                       --> reduces network traffic
                       --> increases performance
                       --> secure, admin can grant permission to use
+DOWNSIDES :
                       --> increases memory usage of every connection
 
            Example 1 
